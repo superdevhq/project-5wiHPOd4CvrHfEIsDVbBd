@@ -143,14 +143,14 @@ const TaskForm = ({ open, onOpenChange, task, categories, onSave }: TaskFormProp
             <div className="grid gap-2">
               <Label htmlFor="category">Category</Label>
               <Select 
-                value={categoryId || ""} 
-                onValueChange={(value) => setCategoryId(value || null)}
+                value={categoryId || "no-category"} 
+                onValueChange={(value) => setCategoryId(value === "no-category" ? null : value)}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select category" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">None</SelectItem>
+                  <SelectItem value="no-category">None</SelectItem>
                   {categories.map((category) => (
                     <SelectItem key={category.id} value={category.id}>
                       {category.name}

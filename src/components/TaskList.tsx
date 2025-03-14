@@ -69,14 +69,14 @@ const TaskList = ({
         
         <div className="flex gap-2 flex-wrap sm:flex-nowrap">
           <Select 
-            value={categoryFilter || ""} 
-            onValueChange={(value) => setCategoryFilter(value || null)}
+            value={categoryFilter || "all-categories"} 
+            onValueChange={(value) => setCategoryFilter(value === "all-categories" ? null : value)}
           >
             <SelectTrigger className="w-[140px]">
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Categories</SelectItem>
+              <SelectItem value="all-categories">All Categories</SelectItem>
               {categories.map((category) => (
                 <SelectItem key={category.id} value={category.id}>
                   {category.name}
@@ -86,14 +86,14 @@ const TaskList = ({
           </Select>
           
           <Select 
-            value={priorityFilter || ""} 
-            onValueChange={(value) => setPriorityFilter(value || null)}
+            value={priorityFilter || "all-priorities"} 
+            onValueChange={(value) => setPriorityFilter(value === "all-priorities" ? null : value)}
           >
             <SelectTrigger className="w-[140px]">
               <SelectValue placeholder="All Priorities" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Priorities</SelectItem>
+              <SelectItem value="all-priorities">All Priorities</SelectItem>
               <SelectItem value="low">Low</SelectItem>
               <SelectItem value="medium">Medium</SelectItem>
               <SelectItem value="high">High</SelectItem>
