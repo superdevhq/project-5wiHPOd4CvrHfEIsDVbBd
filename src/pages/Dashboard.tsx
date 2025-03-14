@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TaskList from "@/components/TaskList";
 import CalendarView from "@/components/CalendarView";
 import TaskForm from "@/components/TaskForm";
+import TaskStatistics from "@/components/TaskStatistics";
 import { v4 as uuidv4 } from "uuid";
 import { CheckCircle2, Clock, ListTodo } from "lucide-react";
 
@@ -15,6 +16,7 @@ const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("list");
   const [taskFormOpen, setTaskFormOpen] = useState(false);
   const [currentTask, setCurrentTask] = useState<Task | null>(null);
+  const [showStats, setShowStats] = useState(false);
 
   const handleAddTask = () => {
     setCurrentTask(null);
@@ -66,12 +68,20 @@ const Dashboard = () => {
   }).length;
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold mb-2">Dashboard</h1>
-        <p className="text-muted-foreground">
-          Welcome to your task management dashboard
-        </p>
+    <div className="space-y-6 p-4 md:p-6">
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold mb-2">Dashboard</h1>
+          <p className="text-muted-foreground">
+            Welcome to your task management dashboard
+          </p>
+        </div>
+        <button 
+          onClick={() => setShowStats(!showStats)}
+          className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+        >
+          {showStats ? "Hide Statistics" : "Show Statistics"}
+        </button>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
@@ -116,6 +126,10 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
+
+      {showStats && (
+        <TaskStatistics tasks={tasks} categories={categories} />
+      )}
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
         <TabsList>
