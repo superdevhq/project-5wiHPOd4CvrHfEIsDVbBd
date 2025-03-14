@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import Dashboard from "@/pages/Dashboard";
+import Index from "@/pages/Index";
 import NotFound from "@/pages/NotFound";
 import DashboardLayout from "@/components/DashboardLayout";
 
@@ -19,6 +20,11 @@ function App() {
             <Route path="/" element={
               <DashboardLayout>
                 <Dashboard />
+              </DashboardLayout>
+            } />
+            <Route path="/tasks" element={
+              <DashboardLayout>
+                <Index />
               </DashboardLayout>
             } />
             <Route path="*" element={<NotFound />} />
