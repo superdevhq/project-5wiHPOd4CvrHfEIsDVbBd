@@ -13,8 +13,8 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
-        <TooltipProvider>
+      <TooltipProvider>
+        <Router>
           <Routes>
             <Route path="/" element={
               <DashboardLayout>
@@ -24,8 +24,8 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Toaster />
-        </TooltipProvider>
-      </Router>
+        </Router>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
