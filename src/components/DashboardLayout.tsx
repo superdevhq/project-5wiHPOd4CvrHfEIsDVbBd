@@ -40,9 +40,9 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       <div className="flex h-screen w-full overflow-hidden">
         <Sidebar>
           <SidebarHeader className="border-b border-sidebar-border/50">
-            <div className="flex items-center justify-between px-2">
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
+            <div className="flex items-center justify-between px-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary">
                   <CheckSquare className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -97,31 +97,31 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               <SidebarMenu>
                 <SidebarMenuItem>
                   <SidebarMenuButton tooltip="Work">
-                    <div className="h-2 w-2 rounded-full bg-[#4361ee]" />
+                    <div className="h-3 w-3 rounded-full bg-[#4361ee]" />
                     <span>Work</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
                   <SidebarMenuButton tooltip="Personal">
-                    <div className="h-2 w-2 rounded-full bg-[#3a86ff]" />
+                    <div className="h-3 w-3 rounded-full bg-[#3a86ff]" />
                     <span>Personal</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
                   <SidebarMenuButton tooltip="Health">
-                    <div className="h-2 w-2 rounded-full bg-[#38b000]" />
+                    <div className="h-3 w-3 rounded-full bg-[#38b000]" />
                     <span>Health</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
                   <SidebarMenuButton tooltip="Shopping">
-                    <div className="h-2 w-2 rounded-full bg-[#ff006e]" />
+                    <div className="h-3 w-3 rounded-full bg-[#ff006e]" />
                     <span>Shopping</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
                   <SidebarMenuButton tooltip="Learning">
-                    <div className="h-2 w-2 rounded-full bg-[#8338ec]" />
+                    <div className="h-3 w-3 rounded-full bg-[#8338ec]" />
                     <span>Learning</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -136,9 +136,9 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           </SidebarContent>
           
           <SidebarFooter className="border-t border-sidebar-border/50">
-            <div className="flex flex-col gap-2 p-2">
+            <div className="flex flex-col gap-3">
               <Button 
-                className="w-full justify-start gap-2" 
+                className="w-full justify-start gap-3" 
                 size="sm"
               >
                 <PlusCircle className="h-4 w-4" />
@@ -146,7 +146,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               </Button>
               <Button 
                 variant="outline" 
-                className="w-full justify-start gap-2" 
+                className="w-full justify-start gap-3" 
                 size="sm"
               >
                 <Settings className="h-4 w-4" />
