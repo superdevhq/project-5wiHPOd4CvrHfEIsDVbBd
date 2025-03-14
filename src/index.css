@@ -39,6 +39,14 @@
     --priority-low: 142 76% 36%;
     --priority-medium: 35 92% 65%;
     --priority-high: 0 84% 60%;
+
+    /* Sidebar colors */
+    --sidebar: 0 0% 100%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-accent: 227 92% 60% / 0.1;
+    --sidebar-accent-foreground: 227 92% 60%;
+    --sidebar-ring: 227 92% 60%;
   }
 
   .dark {
@@ -74,6 +82,14 @@
     --priority-low: 142 76% 36%;
     --priority-medium: 35 92% 65%;
     --priority-high: 0 84% 60%;
+
+    /* Sidebar colors */
+    --sidebar: 224 71% 4%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-border: 215 27% 16%;
+    --sidebar-accent: 227 92% 60% / 0.2;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-ring: 227 92% 60%;
   }
 }
 

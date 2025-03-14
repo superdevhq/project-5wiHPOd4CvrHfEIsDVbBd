@@ -39,7 +39,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     <SidebarProvider defaultOpen={true}>
       <div className="flex h-screen">
         <Sidebar>
-          <SidebarHeader className="border-b border-sidebar-border">
+          <SidebarHeader className="border-b border-sidebar-border/50">
             <div className="flex items-center gap-2 px-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
                 <CheckSquare className="h-5 w-5 text-white" />
@@ -48,7 +48,9 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 <h3 className="font-semibold text-sidebar-foreground">TaskMaster</h3>
                 <p className="text-xs text-sidebar-foreground/60">Organize your tasks</p>
               </div>
-              <SidebarTrigger />
+              <div className="z-10">
+                <SidebarTrigger />
+              </div>
             </div>
           </SidebarHeader>
           
@@ -131,7 +133,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             </SidebarGroup>
           </SidebarContent>
           
-          <SidebarFooter className="border-t border-sidebar-border">
+          <SidebarFooter className="border-t border-sidebar-border/50">
             <div className="flex flex-col gap-2 p-2">
               <Button 
                 className="w-full justify-start gap-2" 
@@ -152,8 +154,8 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           </SidebarFooter>
         </Sidebar>
         
-        <SidebarInset>
-          <div className="flex-1 overflow-auto p-4 md:p-6">
+        <SidebarInset className="w-full">
+          <div className="flex-1 h-full overflow-auto p-4 md:p-6">
             {children}
           </div>
         </SidebarInset>
